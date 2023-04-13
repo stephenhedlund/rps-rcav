@@ -4,10 +4,19 @@ class ApplicationController < ActionController::Base
   # Add your actions below this line
   # ================================
 
+  def homepage
+    render({ :template=> "game_templates/rules"})
+  end
 
   def play_rock
-    #render({:template => "<h1>Hello, world! </h1>".html_safe})
     render ({ :template=> "game_templates/user_rock"})
+  end
 
+  def play_paper
+    render ({ :template=> "game_templates/user_paper"})
+  end
+
+  def play_scissors
+    render ({ :template=> "game_templates/user_scissors"})
   end
 end
